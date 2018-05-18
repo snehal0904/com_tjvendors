@@ -34,7 +34,7 @@ if (JFactory::getUser()->id ){?>
 		</h2>
 	</div>
 <form action="<?php echo JRoute::_('index.php?option=com_tjvendors&layout=edit&vendor_id=' .$this->input->get('vendor_id', '', 'INTEGER') .'&client=' . $this->input->get('client', '', 'STRING') ); ?>"
-	method="post" enctype="multipart/form-data" name="adminForm" id="adminForm" class="form-validate">
+	method="post" enctype="multipart/form-data" name="adminForm" id="vendor-form" class="form-validate">
 	<div class="form-horizontal">
 		<div class="row-fluid">
 			<div class="form-horizontal">
@@ -120,7 +120,7 @@ if (JFactory::getUser()->id ){?>
 				{
 				?>
 				<div>
-					<button type="submit" class="btn btn-default  btn-primary"  onclick="Joomla.submitbutton('vendor.save')">
+					<button type="button" class="btn btn-default  btn-primary"  onclick="Joomla.submitbutton('vendor.save')">
 						<span><?php echo JText::_('JSUBMIT'); ?></span>
 					</button>
 
@@ -134,7 +134,7 @@ if (JFactory::getUser()->id ){?>
 				{
 				?>
 					<div>
-						<button type="submit" class="btn btn-default  btn-primary"  onclick="Joomla.submitbutton('vendor.save')">
+						<button type="button" class="btn btn-default  btn-primary"  onclick="Joomla.submitbutton('vendor.save')">
 							<span><?php echo JText::_('COM_TJVENDORS_CLIENT_APPROVAL'); ?></span>
 						</button>
 						<button class="btn  btn-default" onclick="Joomla.submitbutton('vendor.cancel')">

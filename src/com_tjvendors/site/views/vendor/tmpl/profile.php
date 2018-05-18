@@ -35,7 +35,7 @@ if (JFactory::getUser()->id ){?>
 		</h2>
 	</div>
 <form action="<?php echo JRoute::_('index.php?option=com_tjvendors&layout=edit&vendor_id=' .$this->input->get('vendor_id', '', 'INTEGER') .'&client=' . $this->input->get('client', '', 'STRING') ); ?>"
-	method="post" enctype="multipart/form-data" name="adminForm" id="adminForm" class="form-validate">
+	method="post" enctype="multipart/form-data" name="adminForm" id="vendor-form" class="form-validate">
 	<div class="form-horizontal">
 		<div class="row-fluid">
 			<div class="form-horizontal">

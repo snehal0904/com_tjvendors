@@ -68,7 +68,7 @@ jQuery(window).load(function(){
 	tjVAdmin.vendor.initVendorJs();
 </script>
 <form action="<?php echo JRoute::_('index.php?option=com_tjvendors&layout=edit&client=' . $this->client .'&vendor_id=' . (int) $this->item->vendor_id); ?>"
-	method="post" enctype="multipart/form-data" name="adminForm" id="adminForm" class="form-validate">
+	method="post" enctype="multipart/form-data" name="adminForm" id="vendor-form" class="form-validate">
 	<input type="hidden" name="jform[state]" value="<?php echo $this->item->state; ?>" />
 	<div class="form-horizontal">
 		<?php echo JHtml::_('bootstrap.startTabSet', 'myTab', array('active' => 'personal')); ?>

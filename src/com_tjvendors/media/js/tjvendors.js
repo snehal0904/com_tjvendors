@@ -26,7 +26,7 @@ var tjVAdmin =
 				{
 					if (task == 'vendor.apply' || task == 'vendor.save' || task == 'vendor.save2new')
 					{
-						var validData = document.formvalidator.isValid(document.getElementById('adminForm'));
+						var validData = document.formvalidator.isValid(document.getElementById('vendor-form'));
 						var username = document.getElementById("jform_user_id").value;
 
 						if (username == '')
@@ -36,16 +36,16 @@ var tjVAdmin =
 						}
 						else if (validData == true)
 						{
-							Joomla.submitform(task, document.getElementById('adminForm'));
+							Joomla.submitform(task, document.getElementById('vendor-form'));
 						}
 					}
 					else if (task == 'vendor.cancel')
 					{
-						Joomla.submitform(task, document.getElementById('adminForm'));
+						Joomla.submitform(task, document.getElementById('vendor-form'));
 					}
 					else
 					{
-						Joomla.submitform(task, document.getElementById('adminForm'));
+						Joomla.submitform(task, document.getElementById('vendor-form'));
 					}
 				}
 			},
@@ -156,19 +156,19 @@ var tjVSite =
 				{
 					if (task == 'vendor.save')
 					{
-						var validData = document.formvalidator.isValid(document.getElementById('adminForm'));
+						var validData = document.formvalidator.isValid(document.getElementById('vendor-form'));
 						if(validData == true)
 						{
-							Joomla.submitform(task, document.getElementById('adminForm'));
+							Joomla.submitform(task, document.getElementById('vendor-form'));
 						}
 					}
 					else if (task == 'vendor.cancel')
 					{
-						Joomla.submitform(task, document.getElementById('adminForm'));
+						Joomla.submitform(task, document.getElementById('vendor-form'));
 					}
 					else
 					{
-						Joomla.submitform(task, document.getElementById('adminForm'));
+						Joomla.submitform(task, document.getElementById('vendor-form'));
 					}
 				}
 			},
