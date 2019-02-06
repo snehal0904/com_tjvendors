@@ -27,7 +27,7 @@ class PlgPrivacyTjvendors extends PrivacyPlugin
 	 *
 	 * @var    boolean
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.3.1
 	 */
 	protected $autoloadLanguage = true;
 
@@ -35,7 +35,7 @@ class PlgPrivacyTjvendors extends PrivacyPlugin
 	 * Database object
 	 *
 	 * @var    JDatabaseDriver
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.3.1
 	 */
 	protected $db;
 
@@ -44,7 +44,7 @@ class PlgPrivacyTjvendors extends PrivacyPlugin
 	 *
 	 * @return  array
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.3.1
 	 */
 	public function onPrivacyCollectAdminCapabilities()
 	{
@@ -72,7 +72,7 @@ class PlgPrivacyTjvendors extends PrivacyPlugin
 	 *
 	 * @return  PrivacyExportDomain[]
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.3.1
 	 */
 	public function onPrivacyExportRequest(PrivacyTableRequest $request, JUser $user = null)
 	{
@@ -111,7 +111,7 @@ class PlgPrivacyTjvendors extends PrivacyPlugin
 	 *
 	 * @return  PrivacyExportDomain
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.3.1
 	 */
 	private function createVendorDomain(JTableUser $user)
 	{
@@ -139,7 +139,7 @@ class PlgPrivacyTjvendors extends PrivacyPlugin
 	 *
 	 * @return  PrivacyExportDomain
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.3.1
 	 */
 	private function createVendorClientDomain(JTableUser $user)
 	{
@@ -179,7 +179,7 @@ class PlgPrivacyTjvendors extends PrivacyPlugin
 	 *
 	 * @return  PrivacyExportDomain
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.3.1
 	 */
 	private function createVendorFessDomain(JTableUser $user)
 	{
@@ -219,7 +219,7 @@ class PlgPrivacyTjvendors extends PrivacyPlugin
 	 *
 	 * @return  PrivacyExportDomain
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.3.1
 	 */
 	private function createVendorPassbookDomain(JTableUser $user)
 	{
@@ -262,7 +262,7 @@ class PlgPrivacyTjvendors extends PrivacyPlugin
 	 *
 	 * @return  PrivacyRemovalStatus
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.3.1
 	 */
 	public function onPrivacyCanRemoveData(PrivacyTableRequest $request, JUser $user = null)
 	{

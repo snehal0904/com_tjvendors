@@ -19,7 +19,7 @@ JTable::addIncludePath(JPATH_ROOT . '/administrator/components/com_tjvendors/tab
 /**
  * TJVendors Actions Logging Plugin.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.3.1
  */
 class PlgActionlogTjvendors extends JPlugin
 {
@@ -27,7 +27,7 @@ class PlgActionlogTjvendors extends JPlugin
 	 * Load plugin language file automatically so that it can be used inside component
 	 *
 	 * @var    boolean
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.3.1
 	 */
 	protected $autoloadLanguage = true;
 
@@ -41,7 +41,7 @@ class PlgActionlogTjvendors extends JPlugin
 	 *
 	 * @return  void
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.3.1
 	 */
 	public function tjVendorsOnAfterVendorSave($vendorData, $isNew)
 	{
@@ -166,7 +166,7 @@ class PlgActionlogTjvendors extends JPlugin
 	 *
 	 * @return  void
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.3.1
 	 */
 	public function tjVendorsOnAfterVendorStateChange($pks, $state, $client)
 	{
@@ -230,7 +230,7 @@ class PlgActionlogTjvendors extends JPlugin
 	 *
 	 * @return  void
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.3.1
 	 */
 	public function tjvendorOnAfterVendorDelete($vendorData, $client)
 	{
@@ -276,7 +276,7 @@ class PlgActionlogTjvendors extends JPlugin
 	 *
 	 * @return  void
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.3.1
 	 */
 	public function tjVendorsOnAfterVendorFeeSave($vendorFeeData, $isNew)
 	{
@@ -328,7 +328,7 @@ class PlgActionlogTjvendors extends JPlugin
 	 *
 	 * @return  void
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.3.1
 	 */
 	protected function addLog($messages, $messageLanguageKey, $context, $userId = null)
 	{
