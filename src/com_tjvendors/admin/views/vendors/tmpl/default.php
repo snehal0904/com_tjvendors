@@ -23,7 +23,9 @@ HTMLHelper::_('formbehavior.chosen', 'select');
 
 // Import CSS
 $document = Factory::getDocument();
-$document->addStyleSheet(Uri::root() . 'administrator/components/com_tjvendors/assets/css/tjvendors.css');
+HTMLHelper::stylesheet('administrator/components/com_tjvendors/assets/css/tjvendors.css');
+HTMLHelper::script('libraries/techjoomla/assets/js/houseKeeping.js');
+$document->addScriptDeclaration("var tjHouseKeepingView='vendors';");
 
 $user      = Factory::getUser();
 $userId    = $user->id;
@@ -38,6 +40,7 @@ if ($saveOrder)
 	HTMLHelper::_('sortablelist.sortable', 'vendorList', 'adminForm', strtolower($listDirn), $saveOrderingUrl);
 }
 ?>
+
 <script type="text/javascript">
 	Joomla.orderTable = function ()
 	{
@@ -239,8 +242,8 @@ else
 			</tfoot>
 			<tbody>
 				<?php
-				$options[] = array("type" => Text::_('Approve'), "value" => "1");
-				$options[] = array("type" => Text::_('UnApproved'), "value" => "0");
+				$options[] = array("type" => Text::_('COM_TJVENDORS_VENDORS_VENDOR_APPROVE'), "value" => "1");
+				$options[] = array("type" => Text::_('COM_TJVENDORS_VENDORS_VENDOR_UNAPPROVED'), "value" => "0");
 
 				foreach ($this->items as $i => $item)
 				{

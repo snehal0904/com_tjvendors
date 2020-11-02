@@ -1,30 +1,44 @@
 {
-  "template1": {
+ "template1": {
     "id": "",
     "client": "com_tjvendors",
     "key": "createVendorMailToAdmin",
     "title": "Vendor Creation email to Admin (Approval Off)",
-    "email_body": "<p>Dear Admin,<br /><br />A new vendor <strong>{info.vendor_title}</strong> has registered on the site by {vendorer.name}.<br /><a href='{info.allVendors}'>Click here</a> to see all the vendors.<br /><br />This is system generated email, please do not reply. Many thanks from {info.sitename}</p>",
-    "sms_body": "",
-    "push_body": "",
-    "web_body": "",
-    "email_subject": "New vendor \"{info.vendor_title}\" has registered on {info.sitename}",
-    "sms_subject": "",
-    "push_subject": "",
-    "web_subject": "",
-    "email_status": 1,
-    "sms_status": 0,
-    "push_status": 0,
-    "web_status": 0,
     "user_control": 1,
+    "state": 1,
     "core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "New vendor \"{{info.vendor_title}}\" has registered on {{info.sitename}}",
+				"body": "<p>Dear Admin,<br /><br />A new vendor <strong>{{info.vendor_title}}</strong> has registered on the site by {{vendorer.name}}.<br /><a href='{{info.allVendors}}'>Click here</a> to see all the vendors.<br /><br />This is system generated email, please do not reply. Many thanks from {{info.sitename}}</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 1,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Hi Admin, New vendor {{info.vendor_title}} has registered on the site by {{vendorer.name}}."
+			}
+		}
+	},
     "replacement_tags": [
       {
         "name": "info.vendor_title",
         "description": "Vendor title"
       },
       {
-        "name": "{vendorer.name}",
+        "name": "vendorer.name",
         "description": "Vendorer name"
       },
       {
@@ -45,28 +59,43 @@
     "id": "",
     "client": "com_tjvendors",
     "key": "createVendorMailToOwner",
-    "title": "Your vendor registration at \"{info.sitename}\" is complete",
-    "email_body": "<p>Dear {vendorer.name},<br /><br />Thank you for registering as a vendor, <strong>{info.vendor_title}</strong> is now published at {info.sitename}. You can edit your vendor information <a href='{info.myVendor}'>here</a>.<br /><br />This is system generated email, please do not reply. Many thanks from {info.sitename}</p>",
-    "sms_body": "",
-    "push_body": "",
-    "web_body": "",
-    "email_subject": "Your vendor registration at \"{info.sitename}\" is complete",
-    "sms_subject": "",
-    "push_subject": "",
-    "web_subject": "",
-    "email_status": 1,
-    "sms_status": 0,
-    "push_status": 0,
-    "web_status": 0,
+    "title": "Your vendor registration at \"{{info.sitename}}\" is complete",
     "user_control": 1,
+    "state": 1,
     "core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Your vendor registration at \"{{info.sitename}}\" is complete",
+				"body": "<p>Dear {{vendorer.name}},<br /><br />Thank you for registering as a vendor, <strong>{{info.vendor_title}}</strong> is now published at {{info.sitename}}. You can edit your vendor information <a href='{{info.myVendor}}'>here</a>.<br /><br />This is system generated email, please do not reply. Many thanks from {{info.sitename}}</p>"
+			}
+		}
+	}, 
+	"sms": {
+		"state": 1,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Dear {{vendorer.name}}, Thank you for registering as a vendor, {{info.vendor_title}} is now published at {{info.sitename}}."
+				
+			}
+		}
+	},  
     "replacement_tags": [
       {
         "name": "info.vendor_title",
         "description": "Vendor title"
       },
       {
-        "name": "{vendorer.name}",
+        "name": "vendorer.name",
         "description": "Vendorer name"
       },
       {
@@ -92,27 +121,41 @@
     "client": "com_tjvendors",
     "key": "createVendorMailToAdminWaitingForApproval",
     "title": "Vendor Creation email to Admin (approval On)",
-    "email_body": "<p>Dear Admin,<br /><br />A new vendor named <strong>{info.vendor_title}</strong> has registered on the site by {vendorer.name}. <a href='{info.allVendors}'>Click here</a> to see all the vendors.<br />Note that you need to approve this vendor before they go live on the site.<br /><br />This is system generated email, please do not reply. Many thanks from {info.sitename}.</p>",
-    "sms_body": "",
-    "push_body": "",
-    "web_body": "",
-    "email_subject": "Vendor \"{info.vendor_title}\" needs approval at {info.sitename}",
-    "sms_subject": "",
-    "push_subject": "",
-    "web_subject": "",
-    "email_status": 1,
-    "sms_status": 0,
-    "push_status": 0,
-    "web_status": 0,
     "user_control": 1,
+    "state": 1,
     "core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Vendor \"{{info.vendor_title}}\" needs approval at {{info.sitename}}",
+				"body": "<p>Dear Admin,<br /><br />A new vendor named <strong>{{info.vendor_title}}</strong> has registered on the site by {{vendorer.name}}. <a href='{{info.allVendors}}'>Click here</a> to see all the vendors.<br />Note that you need to approve this vendor before they go live on the site.<br /><br />This is system generated email, please do not reply. Many thanks from {{info.sitename}}.</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 1,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Dear Admin, A new vendor {{info.vendor_title}} has registered on the site by {{vendorer.name}}. Visit admin panel to approve this vendor on site."
+			}
+		}
+	},
     "replacement_tags": [
       {
         "name": "info.vendor_title",
         "description": "Vendor title"
       },
       {
-        "name": "{vendorer.name}",
+        "name": "vendorer.name",
         "description": "Vendorer name"
       },
       {
@@ -134,27 +177,41 @@
     "client": "com_tjvendors",
     "key": "createVendorMailToOwnerWaitingForApproval",
     "title": "Vendor Creation email to Vendor Owner (approval On)",
-    "email_body": "<p>Dear {vendorer.name},<br /><br />You have created a new vendor <strong>{info.vendor_title}</strong>. Your vendor profile is under going approval process. Once your administrator approves you can proceed further.<br />Please wait for approval email.<br /><br />This is system generated email, please do not reply. Many thanks from {info.sitename}</p>",
-    "sms_body": "",
-    "push_body": "",
-    "web_body": "",
-    "email_subject": "Your vendor registration for \"{info.vendor_title}\" at {info.sitename} is pending for approval",
-    "sms_subject": "",
-    "push_subject": "",
-    "web_subject": "",
-    "email_status": 1,
-    "sms_status": 0,
-    "push_status": 0,
-    "web_status": 0,
     "user_control": 1,
+    "state": 1,
     "core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Your vendor registration for \"{{info.vendor_title}}\" at {{info.sitename}} is pending for approval",
+				"body": "<p>Dear {{vendorer.name}},<br /><br />You have created a new vendor <strong>{{info.vendor_title}}</strong>. Your vendor profile is under going approval process. Once your administrator approves you can proceed further.<br />Please wait for approval email.<br /><br />This is system generated email, please do not reply. Many thanks from {{info.sitename}}</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 1,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Dear {{vendorer.name}}, Your newly created vendor profile {{info.vendor_title}} is pending for approval. Wait for approval email to proceed further."
+			}
+		}
+	},
     "replacement_tags": [
       {
         "name": "info.vendor_title",
         "description": "Vendor title"
       },
       {
-        "name": "{vendorer.name}",
+        "name": "vendorer.name",
         "description": "Vendorer name"
       },
       {
@@ -180,27 +237,41 @@
     "client": "com_tjvendors",
     "key": "approvalOnVendorMailToOwner",
     "title": "Admin approves Vendor (approval On)",
-    "email_body": "<p>Dear {vendor_user.name},<br /><br />Your vendor profile <strong>{vendor_data.vendor_title}</strong> has been approved by admin. Now you can further continue.<br /><br />This is system generated email, please do not reply. Many thanks from {info.sitename}</p>",
-    "sms_body": "",
-    "push_body": "",
-    "web_body": "",
-    "email_subject": "Your vendor registration for \"{vendor_data.vendor_title}\" at {info.sitename} has been approved!",
-    "sms_subject": "",
-    "push_subject": "",
-    "web_subject": "",
-    "email_status": 1,
-    "sms_status": 0,
-    "push_status": 0,
-    "web_status": 0,
     "user_control": 1,
+    "state": 1,
     "core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Your vendor registration for \"{{vendor_data.vendor_title}}\" at {{info.sitename}} has been approved!",
+				"body": "<p>Dear {{vendor_user.name}},<br /><br />Your vendor profile <strong>{{vendor_data.vendor_title}}</strong> has been approved by admin. Now you can further continue.<br /><br />This is system generated email, please do not reply. Many thanks from {{info.sitename}}</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 1,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Dear {{vendor_user.name}}, Your vendor profile {{vendor_data.vendor_title}} has been approved by admin. Now you can continue further."
+			}
+		}
+	},
     "replacement_tags": [
       {
         "name": "info.vendor_title",
         "description": "Vendor title"
       },
       {
-        "name": "{vendorUser.name}",
+        "name": "vendorUser.name",
         "description": "Vendorer name"
       },
       {
@@ -218,27 +289,41 @@
     "client": "com_tjvendors",
     "key": "editVendorMailToAdmin",
     "title": "Edit Vendor profile mail to admin",
-    "email_body": "<p>Dear Admin,<br /><br />The user {vendorer.name} has made changes to vendor <strong>{info.vendor_title}</strong>.<br /><br />Vendor details are -<br /><strong>Vendor title</strong> - {info.vendor_title}<br /><strong>User</strong> - {vendorer.name}<br /><strong>Client</strong> - {info.vendorClient}<br /><br />This is system generated email, please do not reply. Many thanks from {info.sitename}</p>",
-    "sms_body": "",
-    "push_body": "",
-    "web_body": "",
-    "email_subject": "Vendor \"{info.vendor_title}\" has been edited on {info.sitename}",
-    "sms_subject": "",
-    "push_subject": "",
-    "web_subject": "",
-    "email_status": 1,
-    "sms_status": 0,
-    "push_status": 0,
-    "web_status": 0,
     "user_control": 1,
+    "state": 1,
     "core": 1,
+    "email":{
+		"state": 1,
+		"cc": "",
+		"bcc": "",
+		"from_name": "",
+		"from_email": "",
+		"emailfields": {
+			"emailfields0": {
+				"id": "",
+				"language": "*",
+				"subject": "Vendor \"{{info.vendor_title}}\" has been edited on {{info.sitename}}",
+				"body": "<p>Dear Admin,<br /><br />The user {{vendorer.name}} has made changes to vendor <strong>{{info.vendor_title}}</strong>.<br /><br />Vendor details are -<br /><strong>Vendor title</strong> - {{info.vendor_title}}<br /><strong>User</strong> - {{vendorer.name}}<br /><strong>Client</strong> - {{info.vendorClient}}<br /><br />This is system generated email, please do not reply. Many thanks from {{info.sitename}}</p>"
+			}
+		}
+	},
+	"sms": {
+		"state": 1,
+		"smsfields": {
+			"smsfields0": {
+				"id": "",
+				"language": "*",
+				"body": "Dear Admin, The user {{vendorer.name}} has made changes to vendor titled {{info.vendor_title}} client {{info.vendorClient}}"
+			}
+		}
+	},
     "replacement_tags": [
       {
         "name": "info.vendor_title",
         "description": "Vendor title"
       },
       {
-        "name": "{vendorer.name}",
+        "name": "vendorer.name",
         "description": "Vendorer name"
       },
       {

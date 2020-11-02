@@ -2,12 +2,12 @@
 <extension version="3.9" type="plugin" group="actionlog" method="upgrade">
 	<name>plg_actionlog_tjvendors</name>
 	<author>Techjoomla</author>
-	<creationDate>10th Jun 2020</creationDate>
+	<creationDate>25th Aug 2020</creationDate>
 	<copyright>Copyright (C) 2016 - 2020 Techjoomla. All rights reserved.</copyright>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<authorEmail>extensions@techjoomla.com</authorEmail>
 	<authorUrl>https://techjoomla.com</authorUrl>
-	<version>1.4.0</version>
+	<version>1.4.1</version>
 	<description>PLG_ACTIONLOG_TJVENDORS_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="tjvendors">tjvendors.php</filename>

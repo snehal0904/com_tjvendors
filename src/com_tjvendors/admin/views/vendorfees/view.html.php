@@ -79,6 +79,11 @@ class TjvendorsViewVendorFees extends HtmlView
 		JToolBarHelper::custom('vendorfees.back', 'chevron-left.png', '', 'COM_TJVENDORS_BACK', false);
 		JToolBarHelper::addNew('vendorfee.add');
 
+		if ($canDo->get('core.edit') && isset($this->items[0]))
+		{
+			JToolBarHelper::editList('vendorfee.edit', 'JTOOLBAR_EDIT');
+		}
+
 		$tjvendorFrontHelper = new TjvendorFrontHelper;
 		$clientTitle = $tjvendorFrontHelper->getClientName($this->client);
 		ToolbarHelper::title($clientTitle . ' : ' . Text::_('COM_TJVENDORS_TITLE_VENDORS_FEES'), 'list.png');

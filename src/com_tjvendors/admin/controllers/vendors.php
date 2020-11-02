@@ -17,6 +17,9 @@ use Joomla\CMS\Language\Text;
 use Joomla\CMS\Log\Log;
 use Joomla\CMS\MVC\Controller\AdminController;
 
+jimport('joomla.application.component.controllerform');
+JLoader::register('TjControllerHouseKeeping', JPATH_SITE . "/libraries/techjoomla/controller/houseKeeping.php");
+
 /**
  * Vendors list controller class.
  *
@@ -24,6 +27,8 @@ use Joomla\CMS\MVC\Controller\AdminController;
  */
 class TjvendorsControllerVendors extends AdminController
 {
+	use TjControllerHouseKeeping;
+
 	/**
 	 * Proxy for getModel.
 	 *

@@ -415,6 +415,7 @@ class Com_TjvendorsInstallerScript
 	 */
 	public function _insertTjNotificationTemplates()
 	{
+		$client = 'com_tjvendors';
 		jimport('joomla.application.component.model');
 		Table::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_tjnotifications/tables');
 
@@ -422,7 +423,7 @@ class Com_TjvendorsInstallerScript
 		$query = $db->getQuery(true);
 		$query->select($db->quoteName('key'));
 		$query->from($db->quoteName('#__tj_notification_templates'));
-		$query->where($db->quoteName('client') . ' = ' . $db->quote("com_tjvendors"));
+		$query->where($db->quoteName('client') . ' = ' . $db->quote($client));
 		$db->setQuery($query);
 		$existingKeys = $db->loadColumn();
 
@@ -442,6 +443,10 @@ class Com_TjvendorsInstallerScript
 				if (!in_array($array['key'], $existingKeys))
 				{
 					$notificationsModel->createTemplates($array);
+				}
+				else
+				{
+					$notificationsModel->updateTemplates($array, $client);
 				}
 			}
 		}

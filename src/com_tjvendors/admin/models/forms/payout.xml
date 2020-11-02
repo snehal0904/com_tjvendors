@@ -9,7 +9,7 @@
 			<option value="0">COM_TJVENDORS_PAYOUTS_FORM_PAYOUT_PENDING</option>
 		</field>
 		<field name="reference_order_id" required="true" type="text" label="COM_TJVENDORS_PAYOUTS_FORM_LBL_PAYOUT_REFERENCE_ORDER_ID" class="required" />
-		<field name="total" required="true" type="text" label="COM_TJVENDORS_PAYOUTS_FORM_LBL_PAYOUT_TOTAL" description="COM_TJVENDORS_PAYOUTS_FORM_DESC_PAYOUT_TOTAL" min="0" class="required" />
+		<field name="total" required="true" type="number" label="COM_TJVENDORS_PAYOUTS_FORM_LBL_PAYOUT_TOTAL" description="COM_TJVENDORS_PAYOUTS_FORM_DESC_PAYOUT_TOTAL" min="1" class="required" step="0.01"/>
 		<field name="bulk_total" type="number" label="COM_TJVENDORS_PAYOUTS_FORM_LBL_PAYOUT_TOTAL" description="COM_TJVENDORS_PAYOUTS_FORM_DESC_PAYOUT_TOTAL" min="0" class="readonly required" readonly="true" />
 	</fieldset>
 </form>

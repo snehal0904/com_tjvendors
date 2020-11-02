@@ -85,6 +85,11 @@ class TjvendorsViewVendors extends HtmlView
 
 		$state = $this->get('State');
 		$canDo = TjvendorsHelper::getActions();
+
+		$toolbar = JToolbar::getInstance('toolbar');
+		$toolbar->appendButton(
+		'Custom', '<a id="tjHouseKeepingFixDatabasebutton" class="btn btn-default hidden"><span class="icon-refresh"></span>'
+		. JText::_('COM_TJVENDORS_FIX_DATABASE') . '</a>');
 		JToolBarHelper::addNew('vendor.add');
 
 		$tjvendorFrontHelper = new TjvendorFrontHelper;
