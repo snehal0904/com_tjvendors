@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="3.0" method="upgrade">
 	<name>COM_TJVENDORS</name>
-	<creationDate>25th Aug 2020</creationDate>
+	<creationDate>2nd Nov 2020</creationDate>
 	<copyright>Copyright (C) 2016 - 2020 Techjoomla. All rights reserved.</copyright>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<author>Techjoomla</author>
 	<authorEmail>extensions@techjoomla.com</authorEmail>
 	<authorUrl>https://techjoomla.com</authorUrl>
-	<version>1.4.1</version>
+	<version>1.4.2</version>
 	<description>COM_TJVENDORS_PRODUCT_DESC</description>
 	<install>
 		<!-- Runs on install -->

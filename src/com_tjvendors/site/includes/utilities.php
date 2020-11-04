@@ -197,7 +197,7 @@ class TjvendorsUtilities
 	 * 
 	 * @return   Array 
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.4.2
 	 */
 	public function getVendorCountries($params)
 	{
@@ -232,7 +232,7 @@ class TjvendorsUtilities
 	 * 
 	 * @return  Array
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.4.2
 	 */
 	public function getVendorRegion($params)
 	{
@@ -268,7 +268,7 @@ class TjvendorsUtilities
 	 * 
 	 * @return  Array
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.4.2
 	 */
 	public function getVendorCity($params)
 	{
@@ -302,7 +302,7 @@ class TjvendorsUtilities
 	 *
 	 * @return  array
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.4.2
 	 */
 	public function getAdminUsers()
 	{

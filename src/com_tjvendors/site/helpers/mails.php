@@ -226,7 +226,7 @@ class TjvendorsMailsHelper
 	 *
 	 * @return  array  User Id Array
 	 *
-	 * @since	__DEPLOY_VERSION__
+	 * @since	1.4.2
 	 */
 	public function getUserIdFromEmail($adminRecipients)
 	{

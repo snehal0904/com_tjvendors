@@ -17,7 +17,7 @@ use Joomla\CMS\Table\Table;
 /**
  * TJvendors email notification migrations
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.4.2
  */
 class TjHouseKeepingEmailTemplate extends TjModelHouseKeeping
 {
@@ -30,7 +30,7 @@ class TjHouseKeepingEmailTemplate extends TjModelHouseKeeping
 	 *
 	 * @return  array $result
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  1.4.2
 	 */
 	public function migrate()
 	{
